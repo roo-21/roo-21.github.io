@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Portfolio</title>
+  <style>
+    /* CSS Variables for easy color/font customization */
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-color: #212529;
+      --accent-color: #0066cc;
+      --muted-text: #6c757d;
+      --max-width: 1000px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding-top: 70px;
+    }
+
+    /* Fixed Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid #e9ecef;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    /* Section Containers */
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .hero h1 {
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--muted-text);
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: #ffffff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      color: var(--muted-text);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted-text);
+      border-top: 1px solid #e9ecef;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <a href="#" class="logo">Your Name</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Hi, I'm Your Name 👋</h1>
+    <p>A brief 1-2 sentence description of what you do, what you specialize in, and what you are currently working on.</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Featured Work</h2>
+    <div class="projects-grid">
+      
+      <div class="project-card">
+        <h3>Project One Title</h3>
+        <p>Short explanation of the project, tools used, and what problem it solved.</p>
+        <a href="#" style="color: var(--accent-color); font-weight: 600;">View Project &rarr;</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Project Two Title</h3>
+        <p>Short explanation of the project, tools used, and what problem it solved.</p>
+        <a href="#" style="color: var(--accent-color); font-weight: 600;">View Project &rarr;</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Project Three Title</h3>
+        <p>Short explanation of the project, tools used, and what problem it solved.</p>
+        <a href="#" style="color: var(--accent-color); font-weight: 600;">View Project &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <p style="color: var(--muted-text); margin-top: 0.5rem; margin-bottom: 1.5rem;">
+      Whether you have a question or just want to say hi, feel free to reach out!
+    </p>
+    <a href="mailto:your.email@example.com" class="btn">Send an Email</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Your Name. Built with HTML & CSS.</p>
+  </footer>
+
+</body>
+</html>
